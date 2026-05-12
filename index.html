@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deepwoken Build Auto-Generator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="cosmos"></div>
+  <main class="app-shell">
+    <header>
+      <p class="eyebrow">The Songbound Workshop</p>
+      <h1>Deepwoken Build Auto-Generator</h1>
+      <p class="subtitle">Roll complete builds with massive card pools across origins, boons/flaws, attunement, oaths, mantras, talents, and more in a Uiverse-style cosmic dashboard.</p>
+    </header>
+
+    <section class="controls card">
+      <div class="control-group">
+        <label for="style">Build Style</label>
+        <select id="style">
+          <option value="balanced">Balanced</option>
+          <option value="pve">PvE Focus</option>
+          <option value="pvp">PvP Focus</option>
+          <option value="caster">Caster Focus</option>
+          <option value="weapon">Weapon Focus</option>
+        </select>
+      </div>
+      <button id="generateBtn">Generate Build</button>
+    </section>
+
+    <section id="buildOutput" class="build-grid"></section>
+  </main>
+
+  <template id="buildCardTemplate">
+    <article class="build-card card">
+      <h2></h2>
+      <ul></ul>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
